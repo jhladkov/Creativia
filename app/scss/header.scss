@@ -1,0 +1,85 @@
+.header{
+  padding: 25px 0;
+  background-color: rgba(9,8,13, 0.9);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  .header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-logo{
+      position: relative;
+      text-align: center;
+      width: 250px;
+      font-size: 25px;
+      user-select: none;
+      z-index: 3;
+      &:before{
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: -25px;
+        left: 0;
+        right: 0;
+        border-right: 1px solid #ff0036;
+        border-left: 1px solid #ff0036;
+        background-color: #131313;
+        width: 250px;
+        height: 30px;
+      }
+      &:after{
+        content: '';
+        width: 250px;
+        position: absolute;
+        bottom: -87px;
+        left: 0;
+        top: 5px;
+        transform: rotate(180deg);
+        z-index: -1;
+        border-bottom: 60px solid #131313;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+      }
+    }
+    .header-menu{
+      .header-menu-list{
+        display: flex;
+        flex-wrap: wrap;
+          .header-menu-list-item{
+            margin-right: 30px;
+            text-transform: uppercase;
+            &:last-child{
+              margin: 0;
+            }
+            a{
+              color: #8e8e8f;
+              position: relative;
+              &:hover{
+                color: #fff;
+                &:before{
+                  content: '';
+                  width: 30px;
+                  height: 3px;
+                  background-color: #ff0036;
+                  position: absolute;
+                  top: -28px;
+                  left: 10px;
+                }
+                &:after{
+                  content: '';
+                  width: 30px;
+                  height: 3px;
+                  background-color: #ff0036;
+                  position: absolute;
+                  bottom: -30px;
+                  left: 10px;
+                }
+              }
+            }
+          }
+      }
+    }
+  }
+}
