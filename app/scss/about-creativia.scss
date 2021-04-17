@@ -1,12 +1,14 @@
-.about-creativia-wrapper{
+.about-creativia-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin-bottom: 100px;
-  .about-creativia-inner{
-    .about-creativia-inner-text{
+
+  .about-creativia-inner {
+    .about-creativia-inner-text {
       margin-bottom: 40px;
     }
-    .about-creativia-inner-item{
+
+    .about-creativia-inner-item {
       width: 100%;
       padding: 13px 30px 13px 70px;
       text-align: left;
@@ -14,26 +16,32 @@
       border: 1px solid #e7e7e7;
       outline: transparent;
       background-color: #f7f7f7;
-      &:first-child{
+
+      &:first-child {
         margin-top: 0;
       }
-      span{
-        border-left: 1px solid #e7e7e7 ;
+
+      span {
+        border-left: 1px solid #e7e7e7;
         padding: 13px 0 13px 30px;
       }
     }
-    .about-creativia-inner-item-panel{
+
+    .about-creativia-inner-item-panel {
       display: none;
     }
   }
 }
-.accordion-inner{
+
+.accordion-inner {
   position: relative;
   margin-top: 10px;
-  &:first-child{
+
+  &:first-child {
     margin: 0;
   }
-  .svg{
+
+  .svg {
     max-width: 18px;
     fill: #8e8e8f;
     position: absolute;
@@ -43,19 +51,24 @@
     border: 1px solid #8e8e8f;
     border-radius: 50%;
     padding: 3px;
-    &:first-child{
+
+    &:first-child {
       display: none;
     }
   }
 }
-.active{
-  span{
+
+.active {
+  span {
     color: #ff0036;
   }
 }
-.about-creativia-wrapper-img{
+
+.about-creativia-wrapper-img {
   position: relative;
-  &:before{
+  opacity: 0;
+
+  &:before {
     content: '';
     width: 425px;
     position: absolute;
@@ -67,16 +80,54 @@
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
   }
-  &:after{
+
+  &:after {
     content: '';
     width: 425px;
     position: absolute;
-    bottom:0%;
+    bottom: 0%;
     left: 0;
     z-index: -1;
     border-bottom: 143px solid #131313;
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
     transform: rotate(180deg);
+  }
+}
+
+.about-creativia-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+  justify-content: center;
+  .about-creativia-footer-item {
+    .about-creativia-footer-item-icon {
+      max-width: 25px;
+      position: relative;
+      &:before {
+        content: '';
+        width: 85px;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        top: -25px;
+        z-index: -1;
+        border-bottom: 35px solid #131313;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+      }
+
+      &:after {
+        content: '';
+        width: 85px;
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        z-index: -1;
+        border-bottom: 35px solid #131313;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        transform: rotate(180deg);
+      }
+    }
   }
 }
