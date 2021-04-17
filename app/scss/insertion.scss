@@ -1,0 +1,59 @@
+.insertion{
+  color: white;
+  .insertion-background{
+    background-image: url("../img/home_01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 2;
+      background-color: rgba(0,0,0, 0.7);
+    }
+  }
+  .insertion-wrapper{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    .insertion-text{
+      font-family: $Lato;
+      margin-bottom: 50px;
+      text-align: center;
+      span{
+        display: block;
+      }
+    }
+    .insertion-button{
+      margin-right: 30px;
+      background-color: #131313;
+      padding: 15px 40px;
+      color: white;
+      text-transform: uppercase;
+      outline: transparent;
+      transition: all .3s;
+      border: none;
+      cursor: pointer;
+      &:hover{
+        background-color: #ff0036;
+      }
+      &:last-child{
+        margin: 0;
+      }
+    }
+  }
+}
